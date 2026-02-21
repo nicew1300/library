@@ -110,6 +110,10 @@ button:active {
     justify-content: center;
 }
 
+
+/* BOOK STYLING BELOW */
+
+
 .book {
     background-color: rgb(42, 41, 54);
     border: solid 2px rgb(63, 63, 176);
@@ -118,7 +122,7 @@ button:active {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     align-items: center;
-    box-shadow: 0 10px 20px rgba(30, 6, 90, 0.4);
+    box-shadow: 0 10px 30px 10px rgba(30, 6, 90, 1);
     font-size: 1.1rem;
 }
 
@@ -127,6 +131,59 @@ button:active {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.book button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    min-width: 0;
+    margin-top: 0.9rem;
+    background-color: rgba(30, 6, 90, 1);
+}
+
+/* The "Read" state for the book card */
+.book.read {
+    border-color: rgb(8, 110, 44);
+    box-shadow: 0 10px 20px rgb(8, 110, 44);
+}
+
+.book.read button {
+    background-color: rgb(8, 110, 84);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* remove button styling */
+.remove-button {
+    background-color: rgb(107, 13, 13) !important;
+    color: rgb(232, 43, 43);
+    border: none;
+    box-shadow: 0 4px 12px rgba(130, 20, 20, 0.4);
+    transition: all 0.3s ease;
+}
+
+.book.read .remove-button {
+    background-color: rgb(130, 20, 20);
+    box-shadow: 0 4px 12px rgba(130, 20, 20, 0.4);
+}
+
+.remove-button:hover {
+    background-color: rgb(180, 30, 30);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgb(191, 4, 4);
+}
+
+.remove-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(130, 20, 20, 0.5);
+}
+
+.book-pages {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+/* MODAL STYLING BELOW */
+
 
 dialog {
     position: fixed;
