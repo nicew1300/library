@@ -24,14 +24,15 @@ const form = document.querySelector("form")
 
 form.addEventListener("submit", createBook)
 
-function Book(titleInput, authorInput, pagesInput, status) {
-    this.title = titleInput;
-    this.author = authorInput;
-    this.pages = pagesInput;
-    this.status = false;
-    this.id = crypto.randomUUID()
+class Book {
+    constructor(titleInput, authorInput, pagesInput) {
+        this.title = titleInput;
+        this.author = authorInput;
+        this.pages = pagesInput;
+        this.status = false;
+        this.id = crypto.randomUUID()
+    }
 }
-
 
 function createBook(e) {
     // prevent page refresh
